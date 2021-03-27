@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+dog_health_chk.txt
+rtn_alert_msgs.json
+.idea/
+dog_filter.txt
