@@ -15,6 +15,7 @@ $ python3 low_price_scanner.py
 
 output file will be in the `WORKING_FOLDER_PATH/dog_health_chk.txt`
 
+---
 
 ### 2. For the StatementDog Parser:
 after finish running low_price_scanner.py,
