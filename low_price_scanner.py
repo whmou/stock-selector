@@ -12,7 +12,7 @@ from pandas_datareader.data import get_quote_yahoo
 
 SEP = os.path.sep
 TICKER_LIST_FILE = 'US_TICKER_LIST.txt'
-WORKING_FOLDER_PATH = 'C:\\pystock'
+WORKING_FOLDER_PATH = 'C:\\Users\\mou\\stock-selector'
 
 if os.name != 'nt':
     WORKING_FOLDER_PATH = '/Users/{}/stock-selector'.format(getpass.getuser())

@@ -133,3 +133,5 @@ dog_health_chk.txt
 rtn_alert_msgs.json
 .idea/
 dog_filter.txt
+us_etf_rtn_alert_msgs.json
+us_top_etf_low_price_output.txt

@@ -10,7 +10,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 ## configs
 SEP = os.path.sep
-DATA_FOLDER = 'c:\\pystock'
+DATA_FOLDER = 'C:\\Users\\mou\\stock-selector'
 if os.name != 'nt':
     DATA_FOLDER = '/Users/{}/stock-selector'.format(getpass.getuser())
 
