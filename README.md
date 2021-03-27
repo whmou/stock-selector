@@ -1,7 +1,7 @@
 # stock-selector
 
 ## prerequisites
-1. ```$ pip install pandas pandas_datareader numpy```
+1. ```$ pip install pandas pandas_datareader numpy selenium```
 2. change the WORKING_FOLDER_PATH in low_price_scanner.py to the folder you clone this project.
 3. change the DATA_FOLDER in statement_dog_parser.py to the folder you clone this project.
 4. make sure TICKER_LIST_FILE is in the WORKING_FOLDER_PATH.
