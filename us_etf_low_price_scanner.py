@@ -103,20 +103,24 @@ def send_alert(alert_msg):
 def check_alert(idx, task):
     task_start = time.time()
     print(idx, len(task), task)
-    now_prices = get_quote_yahoo(task)
+    alert_msg = {}
+    try:
+        now_prices = get_quote_yahoo(task)
 
-    end = datetime.now().strftime("%Y-%m-%d")
-    historical_data_key = '{}_{}'.format(end, idx)
-    if historical_data_key not in historical_cache:
-        hist_data = pdr.DataReader(task, data_source='yahoo', start=datetime.today() - timedelta(days=HIST_MAX_DAYS),
-                                   end=end)
-        historical_cache[historical_data_key] = hist_data
-    else:
-        hist_data = historical_cache[historical_data_key]
-    alert_msg = check_alert_conditions(hist_data, now_prices)
-    print('{} secs used for task {}'.format(int(time.time() - task_start), idx))
-    send_alert(alert_msg)
-    time.sleep(2)
+        end = datetime.now().strftime("%Y-%m-%d")
+        historical_data_key = '{}_{}'.format(end, idx)
+        if historical_data_key not in historical_cache:
+            hist_data = pdr.DataReader(task, data_source='yahoo', start=datetime.today() - timedelta(days=HIST_MAX_DAYS),
+                                       end=end)
+            historical_cache[historical_data_key] = hist_data
+        else:
+            hist_data = historical_cache[historical_data_key]
+        alert_msg = check_alert_conditions(hist_data, now_prices)
+        print('{} secs used for task {}'.format(int(time.time() - task_start), idx))
+        send_alert(alert_msg)
+        time.sleep(2)
+    except:
+        pass
     return alert_msg
 
 
