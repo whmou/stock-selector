@@ -11,7 +11,7 @@ import pandas_datareader as pdr
 from pandas_datareader.data import get_quote_yahoo
 
 SEP = os.path.sep
-TICKER_LIST_FILE = 'US_TOP_EFT_LIST.txt'
+TICKER_LIST_FILE = 'US_TOP_ETF_LIST.txt'
 WORKING_FOLDER_PATH = 'C:\\Users\\mou\\stock-selector'
 
 if os.name != 'nt':
